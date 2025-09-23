@@ -1,0 +1,26 @@
+public class SumSquareDifference {
+
+    
+    static int sumOfNumbers(int n) {
+        return n * (n + 1) / 2;
+    }
+
+    
+    static int sumOfSquares(int n) {
+        return n * (n + 1) * (2 * n + 1) / 6;
+    }
+
+    public static void main(String[] args) {
+        int n = 100; // You can change this to any number
+
+        int sum = sumOfNumbers(n);
+        int sumSquares = sumOfSquares(n);
+
+        int squareOfSum = sum * sum;
+        int difference = squareOfSum - sumSquares;
+
+        System.out.println("Sum of squares: " + sumSquares);
+        System.out.println("Square of sum: " + squareOfSum);
+        System.out.println("Difference: " + difference);
+    }
+}
