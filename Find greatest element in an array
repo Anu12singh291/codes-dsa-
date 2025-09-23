@@ -1,0 +1,15 @@
+public class GreatestElement {
+    public static void main(String[] args) {
+        int[] arr = {10, 45, 2, 67, 34, 89, 21}; // Example array
+        int max = arr[0]; // Assume first element is the greatest
+
+        // Loop through the array to find the greatest element
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i]; // Update max if current element is greater
+            }
+        }
+
+        System.out.println("The greatest element in the array is: " + max);
+    }
+}
