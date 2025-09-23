@@ -1,0 +1,19 @@
+class Solution {
+    static boolean isPalindromeNumber(int n) {
+        int original = n;
+        int reversed = 0;
+
+        while (n > 0) {
+            int digit = n % 10;   // extract last digit
+            reversed = reversed * 10 + digit; // build reverse
+            n = n / 10;           // remove last digit
+        }
+
+        return original == reversed;
+    }
+
+    public static void main(String[] args) {
+        int num = 121;
+        System.out.println(isPalindromeNumber(num) ? "Palindrome" : "Not Palindrome");
+    }
+}
