@@ -1,0 +1,19 @@
+public class McCarthy91 {
+
+    // McCarthy 91 function
+    static int mcCarthy91(int n) {
+        if (n > 100) {
+            return n - 10;
+        } else {
+            return mcCarthy91(mcCarthy91(n + 11));
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] testValues = {50, 75, 101, 200};
+
+        for (int n : testValues) {
+            System.out.println("M(" + n + ") = " + mcCarthy91(n));
+        }
+    }
+}
