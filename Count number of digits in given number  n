@@ -1,0 +1,23 @@
+class Solution {
+    // Function to count digits
+    static int countDigits(int n) {
+        int count = 0;
+        
+        // Handle 0 separately
+        if (n == 0) return 1;
+        
+        // Make n positive if it's negative
+        n = Math.abs(n);
+
+        while (n > 0) {
+            n = n / 10;  // Remove last digit
+            count++;
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int n = 12345;
+        System.out.println("Number of digits: " + countDigits(n));
+    }
+}
