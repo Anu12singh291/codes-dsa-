@@ -1,17 +1,1 @@
-public class HeadRecursionSum {
 
-  
-    static int sum(int n) {
-        if (n == 0) {  // Base case
-            return 0;
-        }
-        int result = sum(n - 1);  // Recursive call first (head recursion)
-        return result + n;        // Process after recursion returns
-    }
-
-    public static void main(String[] args) {
-        int n = 5; // Example: sum of first 5 numbers
-        int total = sum(n);
-        System.out.println("Sum of first " + n + " numbers is: " + total);
-    }
-}
