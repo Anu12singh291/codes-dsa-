@@ -1,16 +1,1 @@
-public class TailRecursionSum {
 
-    
-    static int sum(int n, int accumulator) {
-        if (n == 0) {  // Base case
-            return accumulator;
-        }
-        return sum(n - 1, accumulator + n); 
-    }
-
-    public static void main(String[] args) {
-        int n = 5; // Example: sum of first 5 numbers
-        int total = sum(n, 0); // Initial accumulator is 0
-        System.out.println("Sum of first " + n + " numbers is: " + total);
-    }
-}
